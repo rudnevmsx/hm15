@@ -45,9 +45,11 @@ public class ClientHandler {
                             } else {
                                 System.out.println("Некоректный формат ввода");
                             }
+
+                        } else {
+                            server.broadcastMessage(username + ": " + message);
                         }
                     }
-                    server.broadcastMessage(username + ": " + message);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
